@@ -1,0 +1,93 @@
+html {
+  background: #008080 url('background.jpg');
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 10%;
+  color: rgb(228, 197, 141);
+  text-shadow: 1px 1px 15px #e2860fea;
+}
+
+.clock {
+  backdrop-filter: blur(3px);
+  width: 40rem;
+  height: 40rem;
+  border: 20px solid rgba(202, 112, 28, 0.548);
+  border-radius: 50%;
+  margin: 50px 200px;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 4px  rgba(202, 112, 28, 0.418),
+    inset 0 0 0 3px  rgba(202, 112, 28, 0.418),
+    inset 0 0 10px rgba(202, 112, 28, 0.418),
+    0 0 10px  rgba(202, 112, 28, 0.418);
+}
+
+/* The circle */
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;  
+  /* Accounts for the height of the clock hands */
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  /* Thickness */
+  height: 6px;
+  background-image: linear-gradient(to left, red , yellow);
+  /* Shape */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  /* To rotate the hand properly from the center of the clock */
+  /* Otherwise it rotates around its own middle half */
+  transform-origin: 100%;
+  /* So it starts at 12:00 by default */
+  transform: rotate(90deg);
+  transition: all 0.05sec;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.minute-hand {
+  height: 10px;
+}
+
+.hour-hand {
+  height: 12px;
+  width: 30%;
+  right: 50%;  
+}
+
+.ImgSrc,
+.ImgSrc a {
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(228, 197, 141);
+  text-shadow: 1px 1px 15px #e2860fea;
+}
+
+div.ImgSrc {
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  margin-bottom: 10px;
+}
