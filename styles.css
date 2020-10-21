@@ -61,16 +61,16 @@ h1 {
   transform-origin: 100%;
   /* So it starts at 12:00 by default */
   transform: rotate(90deg);
-  transition: all 0.05sec;
+  transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .minute-hand {
-  height: 10px;
+  height: 8px;
 }
 
 .hour-hand {
-  height: 12px;
+  height: 8px;
   width: 30%;
   right: 50%;  
 }
